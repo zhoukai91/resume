@@ -1,0 +1,64 @@
+.section-1 {
+  position: relative;
+  background-color: #000;
+}
+
+.section-1 #hdimg {
+  position: absolute;
+  bottom: 0;
+}
+
+.section-1 #home {
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  bottom: 15%;
+  font-weight: 700;
+  color: #FFF;
+}
+
+.section-1 #home h1 {
+  background-color: rgba(0, 0, 0, 0.22);
+  border: 5px solid #FFF;
+}
+
+.section-1 #home h2 {
+  color: #000;
+  background-color: #FFF;
+}
+
+.section-1 #home h2, .section-1 #home h4 {
+  /*字母间隔*/
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.section-1 #home div {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.section-1 #home ul li a {
+  border: 2px solid white;
+  border-radius: 5px;
+  display: block;
+}
+
+.section-1 #home ul li:hover a {
+  color: #000;
+  background-color: #fff;
+}
+
+.section-2 {
+  position: relative;
+}
+
+.container {
+  position: relative;
+  top: 15%;
+}
+.section-2 .container h2 {
+  display: inline-block;
+  margin:0 auto;
+}
