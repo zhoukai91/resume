@@ -79,6 +79,7 @@
 				}
 			});
 			$links.on('click',function(){
+				if($(document.body).width()<768) return true;
 				index = $(this).data('jq-section');
 				$self.index = index;
 				console.log($self.index);

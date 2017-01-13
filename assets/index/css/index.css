@@ -2,6 +2,10 @@
   position: relative;
   background-color: #000;
 }
+.section-2,.section-4{
+  background-color: #F5F5F5;
+}
+
 
 .section-1 #hdimg {
   position: absolute;

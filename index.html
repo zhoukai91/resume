@@ -15,26 +15,27 @@
   <link rel="stylesheet" href="assets/index/css/respond.css">
 
 
-</hea
+</head>
+
 <body>
 <div id="sw">
   <ul class="section-wrap section-animate">
     <li class="section section-1">
       <img id="hdimg" class="img-responsive" src="assets/index/img/header.jpg">
       <div id="home" class="container">
-        <h1 class="col-md-12">ZHOU KAI</h1>
+        <h1>ZHOU KAI</h1>
         <h2 class="col-md-6 col-md-offset-3 col-xs-8 col-xs-offset-2"><b> - </b><span>WEB DEVELOPER</span><b> - </b></h2>
         <div id="tosection" class="col-xs-12">
           <ul class="row">
-            <li class="col-md-3 col-md-offset-0 col-sm-5 col-sm-offset-1 "><a data-jq-section="1" href="#"><h4>ABOUT</h4></a></li>
-            <li class="col-md-3 col-sm-5 "><a data-jq-section="2" href="#"><h4>SKILLS</h4></a></li>
-            <li class="col-md-3 col-md-offset-0 col-sm-5 col-sm-offset-1 "><a data-jq-section="3" href="#"><h4>WORKS</h4></a></li>
-            <li class="col-md-3 col-sm-5 "><a data-jq-section="4" href="#"><h4>ACHIEVEMENTS</h4></a></li>
+            <li class="col-md-3 col-md-offset-0 col-sm-5 col-sm-offset-1 "><a data-jq-section="1" href="#st1"><h4>ABOUT</h4></a></li>
+            <li class="col-md-3 col-sm-5 "><a data-jq-section="2" href="#st2"><h4>SKILLS</h4></a></li>
+            <li class="col-md-3 col-md-offset-0 col-sm-5 col-sm-offset-1 "><a data-jq-section="3" href="#st3"><h4>WORKS</h4></a></li>
+            <li class="col-md-3 col-sm-5 "><a data-jq-section="4" href="#st4"><h4>ACHIEVEMENTS</h4></a></li>
           </ul>
         </div>
       </div>
     </li>
-    <li  class="section section-2">
+    <li id="st1"  class="section section-2">
       <div class="container">
         <div >
           <h1>ABOUT ME</h1>
@@ -82,19 +83,60 @@
           <div class="clearfix"></div>
       </div>
     </li>
-    <li  class="section section-3">
+    <li id="st2"  class="section section-3">
       <div class="container">
         <h1>SKILLS</h1>
+        <div id="tabs" class="col-xs-12 col-md-5 col-md-offset-1">
+          <ul class="nav nav-tabs" role="tablist" id="myTab">
+            <li role="presentation" class="active"><a href="#home1" role="tab" data-toggle="tab">Home</a></li>
+            <li role="presentation"><a href="#profile" role="tab" data-toggle="tab">Profile</a></li>
+            <li role="presentation"><a href="#messages" role="tab" data-toggle="tab">Messages</a></li>
+            <li role="presentation"><a href="#settings" role="tab" data-toggle="tab">Settings</a></li>
+          </ul>
+
+          <div  class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="home1">
+              <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur consequatur delectus
+                dignissimos excepturi impedit iste magni molestias mollitia nobis officia omnis, pariatur possimus quam
+                quas quia sapiente soluta unde voluptatem.
+              </div>
+              <div>Accusamus aspernatur consequatur corporis dicta dignissimos distinctio dolore dolorum enim eos
+                exercitationem expedita fuga, harum, impedit in ipsam mollitia provident quibusdam quos rem rerum sit
+                veniam voluptatibus! Labore, laborum, officia!
+              </div></div>
+            <div role="tabpanel" class="tab-pane" id="profile">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum deserunt error eveniet, explicabo ipsam maiores quaerat quas quod reprehenderit temporibus. Ab animi consequuntur culpa enim maiores optio praesentium ratione. Numquam!</div>
+            <div role="tabpanel" class="tab-pane" id="messages">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi delectus dicta eligendi eos est exercitationem impedit, incidunt ipsum labore laudantium nobis nostrum perferendis possimus quisquam sed sit ullam voluptatum?</div>
+            <div role="tabpanel" class="tab-pane" id="settings">
+              <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consectetur excepturi illum, ipsa
+                itaque iure magnam optio perferendis praesentium, qui quis rem repellendus repudiandae vel voluptate.
+                Atque dolorem eum laboriosam.
+              </div>
+              <div>Amet dolores eligendi perspiciatis quisquam sed. Aut blanditiis ea, ipsum modi neque nostrum
+                praesentium quas sed. Animi architecto distinctio eligendi, est illum in tempora ut voluptates. Eum ex
+                hic qui?
+              </div></div>
+          </div>
+        </div>
+        <div id="level" class="colxs12 col-md-5">
+          <h2>熟练程度</h2>
+          <p>Jscript</p>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+              <span class="sr-only">60% Complete</span>
+            </div>
+          </div>
+        </div>
       </div>
     </li>
-    <li  class="section section-4">
+    <li id="st3"  class="section section-4">
       <div class="container">
         <h1>WORKS</h1>
       </div>
     </li>
-    <li  class="section section-5">
+    <li id="st4"  class="section section-5">
       <div class="container">
         <h1>ACHIEVEMENTS</h1>
+
       </div>
     </li>
   </ul>
