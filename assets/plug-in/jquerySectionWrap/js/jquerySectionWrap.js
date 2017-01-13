@@ -25,52 +25,70 @@
 			this.$serials.addClass("serial");
 			this.append(this.$serials);
 		},
+
+		_links : function () {
+
+		},
 		//封装了自定义事件的触发机制
 		_attachEvent : function(event,args){
 			this.trigger(event,args);
 		},
 		_bind : function(){
-			var _$this = this;//
+			var $links = $('div#tosection a');
+			var $self = this;//
 			this.on("mousewheel",function(e){
-				if(_$this.lock){
-					_$this.lock = false;
+				if($self.lock&&($(document.body).width()>768)){
+					$self.lock = false;
 					var dir = e.originalEvent.deltaY<0;
-					var beforeIndex = _$this.index;
-					dir?_$this.index--:_$this.index++;
-					_$this.index = Math.min(_$this.index,_$this.last);
-					_$this.index = Math.max(_$this.index,0);
-					if(beforeIndex==_$this.index){
-						_$this.lock = true;
+					var beforeIndex = $self.index;
+					dir?$self.index--:$self.index++;
+					$self.index = Math.min($self.index,$self.last);
+					$self.index = Math.max($self.index,0);
+					if(beforeIndex==$self.index){
+						$self.lock = true;
 						return;
 					}
-					_$this._attachEvent("beforeWheel",{
+					$self._attachEvent("beforeWheel",{
 						before : beforeIndex,
-						beforeDOM : _$this.$sections.eq(beforeIndex),
-						after : _$this.index,
-						afterDOM : _$this.$sections.eq(_$this.index)
+						beforeDOM : $self.$sections.eq(beforeIndex),
+						after : $self.index,
+						afterDOM : $self.$sections.eq($self.index)
 					});
-					_$this.$sectionWrap.css({
-						"transform": "translateY(-"+_$this.index+"00%)",
-						"-moz-transform": "translateY(-"+_$this.index+"00%)",
-						"-webkit-transform": "translateY(-"+_$this.index+"00%)",
-						"-o-transform": "translateY(-"+_$this.index+"00%)"
+					$self.$sectionWrap.css({
+						"transform": "translateY(-"+$self.index+"00%)",
+						"-moz-transform": "translateY(-"+$self.index+"00%)",
+						"-webkit-transform": "translateY(-"+$self.index+"00%)",
+						"-o-transform": "translateY(-"+$self.index+"00%)"
 					});
 					setTimeout(function(){
-						_$this.lock = true;
-						_$this._attachEvent("afterWheel",{
+						$self.lock = true;
+						$self._attachEvent("afterWheel",{
 							before : beforeIndex,
-							beforeDOM : _$this.$sections.eq(beforeIndex),
-							after : _$this.index,
-							afterDOM : _$this.$sections.eq(_$this.index)
+							beforeDOM : $self.$sections.eq(beforeIndex),
+							after : $self.index,
+							afterDOM : $self.$sections.eq($self.index)
 						});
-						_$this.$serials
-							.children()
-							.eq(_$this.index)
-							.addClass("curr")
-							.siblings()
-							.removeClass("curr");
+						this.showSerial&&
+								$self.$serials
+									.children()
+									.eq($self.index)
+									.addClass("curr")
+									.siblings()
+									.removeClass("curr");
 					},1000);
 				}
+			});
+			$links.on('click',function(){
+				index = $(this).data('jq-section');
+				$self.index = index;
+				console.log($self.index);
+				$self.$sectionWrap.css({
+					"transform": "translateY(-"+$self.index+"00%)",
+					"-moz-transform": "translateY(-"+$self.index+"00%)",
+					"-webkit-transform": "translateY(-"+$self.index+"00%)",
+					"-o-transform": "translateY(-"+$self.index+"00%)"
+				});
+				return false;
 			});
 		}
 	};
@@ -86,51 +104,3 @@
 		return this;
 	}
 },"sectionWrapper");
-// $(function(){
-// 	var $sectionWrap = $(".section-wrap");
-// 	var $header = $("header");
-// 	var $menu = $header.find(".menubar");
-// 	var index = 0,last = $sectionWrap.find("li.section").length-1;
-// 	var lock = true;
-// 	function onBeforeWheel(index){
-// 		console.log(index);
-// 		$header.addClass("hide");
-// 		$(".section-2").removeClass("action");
-// 	}
-// 	function onAfterWheel(index){
-// 		if(index==0){
-// 			$menu.removeClass("black").addClass("white");
-// 		}else{
-// 			$menu.removeClass("white").addClass("black");
-// 		}
-// 		if(index==1){
-// 			$(".section-2").addClass("action");
-// 		}
-// 		$header.removeClass("hide");
-// 	}
-// 	$(document.body).on("mousewheel",function(e){
-// 		if(lock){
-// 			lock = false;
-// 			var dir = e.originalEvent.deltaY<0;
-// 			var beforeIndex = index;
-// 			dir?index--:index++;
-// 			index = Math.min(index,last);
-// 			index = Math.max(index,0);
-// 			if(beforeIndex==index){
-// 				lock = true;
-// 				return;
-// 			}
-// 			onBeforeWheel(beforeIndex);
-// 			$sectionWrap.css({
-// 				"transform": "translateY(-"+index+"00%)",
-// 				"-moz-transform": "translateY(-"+index+"00%)",
-// 				"-webkit-transform": "translateY(-"+index+"00%)",
-// 				"-o-transform": "translateY(-"+index+"00%)"
-// 			});
-// 			setTimeout(function(){
-// 				lock = true;
-// 				onAfterWheel(index);
-// 			},1000);
-// 		}
-// 	});
-// });

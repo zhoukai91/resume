@@ -10,9 +10,6 @@
 
 .section-1 #home {
   position: absolute;
-  top: 15%;
-  left: 15%;
-  bottom: 15%;
   font-weight: 700;
   color: #FFF;
 }
@@ -56,7 +53,11 @@
 
 .container {
   position: relative;
+  width:90%;
   top: 15%;
+  left: 5%;
+  margin: 0;
+  bottom:10%;
 }
 .section-2 .container h2 {
   display: inline-block;
