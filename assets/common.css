@@ -36,10 +36,10 @@ body a:focus, a:hover {
   text-decoration: none;
 }
 .animate {
-  transition: 0.5s all;
-  -webkit-transition: 0.5s all;
-  -moz-transition: 0.5s all;
-  -o-transition: 0.5s all;
+  transition:  all 0.5s linear;
+  -webkit-transition:  all 0.5s linear;
+  -moz-transition:  all 0.5s linear;
+  -o-transition:  all 0.5s linear;
 }
 
 label {

@@ -1,3 +1,15 @@
+.section h1{
+  font-weight:700;
+}
+.section h3{
+  border-bottom: 3px solid #000;
+  padding:0;
+  font-size: 22px;
+  text-align: left;
+
+}
+
+
 .section-1 {
   position: relative;
   background-color: #000;
@@ -5,29 +17,23 @@
 .section-2,.section-4{
   background-color: #F5F5F5;
 }
-
-
 .section-1 #hdimg {
   position: absolute;
   bottom: 0;
 }
-
 .section-1 #home {
   position: absolute;
   font-weight: 700;
   color: #FFF;
 }
-
 .section-1 #home h1 {
   background-color: rgba(0, 0, 0, 0.22);
   border: 5px solid #FFF;
 }
-
 .section-1 #home h2 {
   color: #000;
   background-color: #FFF;
 }
-
 .section-1 #home h2, .section-1 #home h4 {
   /*字母间隔*/
   letter-spacing: 2px;
@@ -54,16 +60,75 @@
 .section-2 {
   position: relative;
 }
-
-.container {
+.container-fluid {
   position: relative;
-  width:90%;
-  top: 15%;
-  left: 5%;
+  top: 10%;
   margin: 0;
   bottom:10%;
 }
-.section-2 .container h2 {
+.section-2 .container-fluid h2 {
   display: inline-block;
   margin:0 auto;
+}
+.section-2 .about{
+  text-indent:35px;
+  text-align: left;
+}
+.section-2 .contact ul li {
+  overflow: hidden;
+}
+.clearfix{
+  clear: both;
+}
+.contact ul li div{
+  float: left;
+}
+
+.contact .li1{
+  width:15%;
+  font-weight:bold;
+  text-align: left;
+}
+.section-3 #myTab li{
+  cursor: pointer;
+  display: inline-block;
+  margin: 0;
+  outline: none;
+  width: 33.3%;
+  float: left;
+  padding:0;
+  border-bottom: 1px ridge #777;
+  color: #333;
+}
+.section-3 #myTab li a{
+  font-size:1.1em;
+  padding: 10px 0 ;
+  border:none;
+  color: #333;
+}
+.section-3 #myTab li.active a{
+  background-color: #607D8B;
+  color:#fff;
+}
+.section-3 #myTab li.active{
+  text-shadow: none;
+  background-color: #607D8B;
+  border-bottom: 1px solid #607d8b;
+}
+.section-3 .tab-content{
+  text-indent:35px;
+  margin-top:40px;
+  text-align: left;
+}
+.section-3 .level p{
+  width:100%;
+  text-align: left;
+  margin-bottom:7px;
+}
+.section-3 .level .progress{
+  font-size:1.1em;
+  height:15px;
+}
+.section-3 .level .progress-bar{
+  background-color: #607d8b;
 }

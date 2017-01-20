@@ -1,11 +1,22 @@
 /*自适应调整:移动设备*/
 /*设置不同设备下的字体大小和边距*/
 @media screen and (min-width: 992px){
-  .section-1 #home{
+  .section h1{
+    margin-bottom:50px;
+    font-size: 50px;
+  }
+  .section h3{
+    font-size: 25px;
+    font-weight: bold;
+    padding-bottom:10px;
+    margin-bottom:25px;
+  }
+
+  #home{
     width: 70%;
     top: 15%;
     left: 15%;
-    bottom: 15%;
+    bottom: 10%;
   }
   .section-1 #home h1 {
     padding: 75px 0;
@@ -20,10 +31,27 @@
   .section-1 #home ul li a{
     padding:15px 25px;
   }
+
+  .section-2 .contact li{
+    padding-bottom:30px;:
+  }
 }
 @media screen and (min-width: 768px)and (max-width: 992px){
-  .section-1 #home{
+  .section h1{
+    margin-bottom: 40px;
+    font-size: 40px;
+  }
+  .section h3{
+    font-size: 22px;
+    font-weight: 100;
+    padding-bottom:10px;
+    margin-bottom:25px;
+  }
+
+
+   #home{
     width:80%;
+    left: 10%;
     bottom:5%;
   }
   .section-1 #home h1 {
@@ -45,10 +73,35 @@
     margin-bottom: 15px;
     padding:15px 25px;
   }
+  .section-2 .contact .li1{
+    width:20%;
+  }
+  .section-2 .contact li{
+    padding-bottom:25px;:
+  }
+
 }
 @media screen and (max-width: 768px){
+  .section h1{
+    margin-bottom: 25px;
+    font-size: 30px;
+  }
+  .section h3{
+    font-size: 20px;
+    font-weight: 100;
+    padding-bottom:7px;
+    margin-bottom:15px;
+  }
+  .container-fluid{
+    top:10%;
+  }
   body{
     overflow: visible;
+  }
+  #home{
+    width:90%;
+    left: 5%;
+    bottom:15%;
   }
   .section-1 #home h1 {
     padding: 30px 0;
@@ -74,8 +127,15 @@
     padding:10px 15px;
     width:100%;
   }
-  .container{
-    top:10%;
+  .section-2 .about,  .section-3 .skills{
+    margin-bottom:40px;
+  }
+
+  .section-2 .contact li{
+    padding-bottom:20px;:
+  }
+  .section-2 .contact .li1{
+    width:17%;
   }
 }
 
