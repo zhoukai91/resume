@@ -101,7 +101,7 @@
   #home{
     width:90%;
     left: 5%;
-    bottom:15%;
+    bottom:5%;
   }
   .section-1 #home h1 {
     padding: 30px 0;
@@ -109,7 +109,7 @@
     letter-spacing: 3px;
   }
   .section-1 #home h2 {
-    margin-top:50px;
+    margin-top:30px;
     padding: 15px 0;
     font-size: 25px;
   }
@@ -120,8 +120,8 @@
     position: relative;
     left:10%;
     width:80%;
-
   }
+
   .section-1 #home ul li a{
     border:0;
     padding:10px 15px;
