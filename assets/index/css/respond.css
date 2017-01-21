@@ -83,8 +83,8 @@
 }
 @media screen and (max-width: 768px){
   .section h1{
-    margin-bottom: 25px;
-    font-size: 30px;
+    margin-bottom: 0.5em;
+    font-size: 2.5em;
   }
   .section h3{
     font-size: 20px;
@@ -95,9 +95,9 @@
   .container-fluid{
     top:10%;
   }
-  body{
+ /* body{
     overflow: visible;
-  }
+  }*/
   #home{
     width:90%;
     left: 5%;
@@ -109,7 +109,7 @@
     letter-spacing: 3px;
   }
   .section-1 #home h2 {
-    margin-top:30px;
+    margin-top:1.5em;
     padding: 15px 0;
     font-size: 25px;
   }
@@ -124,18 +124,22 @@
 
   .section-1 #home ul li a{
     border:0;
-    padding:10px 15px;
+    padding:0.5em;
     width:100%;
   }
   .section-2 .about,  .section-3 .skills{
-    margin-bottom:40px;
+    margin-bottom:2.5em;
   }
 
   .section-2 .contact li{
-    padding-bottom:20px;:
+    padding-bottom:1em;:
   }
   .section-2 .contact .li1{
-    width:17%;
+    width:22%;
   }
+
+  .section-3 .level p{
+  margin-bottom:7px;
+}
 }
 
