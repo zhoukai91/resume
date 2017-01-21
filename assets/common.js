@@ -1,3 +1,3 @@
 (function(){
-  alert($(document.body).width()+'px,'+$(document.body).height()+'px');
+  //alert($(document.body).width()+'px,'+$(document.body).height()+'px');
 })();

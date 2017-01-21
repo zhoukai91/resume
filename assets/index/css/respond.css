@@ -84,10 +84,10 @@
 @media screen and (max-width: 768px){
   .section h1{
     margin-bottom: 0.5em;
-    font-size: 2.5em;
+    font-size: 2em;
   }
   .section h3{
-    font-size: 20px;
+    font-size: 1.4em;
     font-weight: 100;
     padding-bottom:7px;
     margin-bottom:15px;
@@ -110,8 +110,8 @@
   }
   .section-1 #home h2 {
     margin-top:1.5em;
-    padding: 15px 0;
-    font-size: 25px;
+    padding: 0.2em 0;
+    font-size: 2;
   }
   .section-1 #home h2 b{
     display: none;
@@ -128,7 +128,7 @@
     width:100%;
   }
   .section-2 .about,  .section-3 .skills{
-    margin-bottom:2.5em;
+    margin-bottom:2em;
   }
 
   .section-2 .contact li{
@@ -140,6 +140,9 @@
 
   .section-3 .level p{
   margin-bottom:7px;
-}
+  }
+  .section-3 #myTab li a{
+    padding:5px 0;
+  }
 }
 

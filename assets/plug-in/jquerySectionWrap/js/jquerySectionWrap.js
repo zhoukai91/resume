@@ -25,10 +25,6 @@
 			this.$serials.addClass("serial");
 			this.append(this.$serials);
 		},
-
-		_links : function () {
-
-		},
 		//封装了自定义事件的触发机制
 		_attachEvent : function(event,args){
 			this.trigger(event,args);
@@ -50,9 +46,11 @@
 					};
 
 			this.on("touchstart",function(e){
-				e.preventDefault();
+				//一个小bug 将会导致click事件失效
+				//e.preventDefault();
 				startX = e.originalEvent.changedTouches[0].pageX;
 				startY = e.originalEvent.changedTouches[0].pageY;
+				console.log('点击');
 			});
 			this.on("touchmove",function(e){
 				e.preventDefault();
@@ -134,10 +132,24 @@
 					}
 			});
 			$links.on('click',function(){
-				index = $(this).data('jq-section');
-				$self.index = index;
+				$self.index = $(this).data('jq-section');
+				 var beforeIndex = 0;
 				// console.log($self.index);
+				////触发翻页前的自定义事件
+				$self._attachEvent("beforeWheel",{
+					before : beforeIndex,
+					beforeDOM : $self.$sections.eq(beforeIndex),
+					after : $self.index,
+					afterDOM : $self.$sections.eq($self.index)
+				});
 				$self.$sectionWrap.css(myCss($self.index));
+				//触发翻页后的自定义事件
+				$self._attachEvent("afterWheel",{
+					before : beforeIndex,
+					beforeDOM : $self.$sections.eq(beforeIndex),
+					after : $self.index,
+					afterDOM : $self.$sections.eq($self.index)
+				});
 				return false;
 			});
 		}
