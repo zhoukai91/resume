@@ -101,7 +101,7 @@
   color: #333;
 }
 .section-3 #myTab li a{
-  font-size:1.1em;
+  font-size:1em;
   padding: 10px 0 ;
   border:none;
   color: #333;
@@ -116,11 +116,12 @@
   border-bottom: 1px solid #607d8b;
 }
 .section-3 .tab-content{
-  text-indent:35px;
+  text-indent:1.5em;
   margin-top:1.5em;
   text-align: left;
 }
 .section-3 .level .row{
+  text-indent: 35px;
   margin-bottom:10px;
 } 
 .section-3 .level p{
@@ -133,6 +134,7 @@
   height:15px;
   background-color: #e3e3e3;
   margin-bottom: 0;
+  margin-top:5px;
 }
 .section-3 .level .progress-bar{
   background-color: #607d8b;
@@ -143,3 +145,44 @@
 
 }
 
+.section-4 .project-item{
+  overflow: hidden;
+  margin-bottom:1em;
+}
+.section-4 .project-merchandise{
+  display: block;
+  width:100%;
+  height: 100%
+  overflow: hidden;
+  position: relative;
+}
+.section-4 .mask-layout{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: -100%; 
+    background: rgba(0,0,0,.5);
+    color: #fff;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    transition: all .5s ease;
+    -webkit-transition-delay: .5s;
+    -moz-transition-delay: .5s;
+    -o-transition-delay: .5s;
+    -ms-transition-delay: .5s;
+    transition-delay: .5s;
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+.section-4 .mask-layout.touch{
+    top: 0%; 
+    transform: rotate(0deg);
+}
+.section-4 .mask-layout h4{
+      margin-top: 20%;
+}

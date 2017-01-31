@@ -34,7 +34,14 @@ $(function () {
     e.preventDefault();
     $(this).tab('show')
   });
-
-
+  // 滑入触发CSS动画
+  $('.project-merchandise')
+    .on('mouseover',function(){
+      console.log($(this).find('.mask-layout'));
+      $(this).find('.mask-layout').addClass('touch');
+    })
+    .on('mouseout',function(){
+      $(this).find('.mask-layout').removeClass('touch');
+    })
 });
 

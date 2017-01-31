@@ -6,7 +6,8 @@ html,body{
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+  /*font-family: 'Roboto', sans-serif;*/
+  font-family:"微软雅黑", Times New Roman;
   background: #FFF;
   font-size: 14px;
 }
@@ -14,17 +15,16 @@ p,ol,ul,li,dl,dd,dt,h1,h2,h3,h4,h5,h6,img{
   margin: 0;
   padding: 0;
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
 }
 ul,ol{
   list-style: none;
 }
 
 body a {
-  transition: 0.5s all;
-  -webkit-transition: 0.5s all;
-  -moz-transition: 0.5s all;
-  -o-transition: 0.5s all;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
   text-decoration: none;
 }
 
