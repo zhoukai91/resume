@@ -30,7 +30,7 @@
 			this.trigger(event,args);
 		},
 		_bind : function(){
-			var $links = $('div#tosection a'),
+			var $links = $('#tosection a'),
 				$self = this,//
 				startX = null,
 				startY = null,

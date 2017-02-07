@@ -1,0 +1,48 @@
+<div ng-include=" './assets/works/woele/tpl/header.html' "></div>
+
+<div class="container">
+
+  <div class="panel panel-default">
+    <div class="panel-body">
+
+      <form ng-if="!result">
+        <div class="form-group">
+          <label for="phone">电话号码：</label>
+          <input ng-model="order.phone" class="form-control" type="text" id="phone"/>
+        </div>
+        <div class="form-group">
+          <label >性别：</label>
+          <label class="radio-inline">
+            <input ng-model="order.sex" type="radio" name="sex" value="1">男
+          </label>
+          <label class="radio-inline">
+            <input ng-model="order.sex" type="radio" name="sex" value="2">女
+          </label>
+        </div>
+        <div class="form-group">
+          <label for="user_name">收货人：</label>
+          <input ng-model="order.user_name" class="form-control"  type="text" id="user_name" />
+        </div>
+        <div class="form-group">
+          <label for="addr">收货地址：</label>
+          <textarea ng-model="order.addr" class="form-control" type="text" id="addr" cols="3"></textarea>
+        </div>
+
+        <input ng-click="submitOrder()" class="btn btn-success" type="button" value="提交订单"/>
+
+      </form>
+
+      <div ng-if="result.msg==='succ'" class="alert alert-success">
+        <h4>下单成功！</h4>
+        <p>您的此次订单编号为：{{4}}。</p>
+        <p>您可以在 <a href="#/myorder">用户中心</a> 查看自己的订单。 </p>
+      </div>
+      <div ng-if="result.msg==='err'" class="alert alert-danger">
+        <h4>下单失败！</h4>
+        <p>失败原因为：{{result.reason}}。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div ng-include=" './assets/works/woele/tpl/footer.html' "></div>

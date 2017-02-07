@@ -121,7 +121,7 @@
   text-align: left;
 }
 .section-3 .level .row{
-  text-indent: 35px;
+  /*text-indent: 35px;*/
   margin-bottom:10px;
 } 
 .section-3 .level p{
@@ -152,9 +152,10 @@
 .section-4 .project-merchandise{
   display: block;
   width:100%;
-  height: 100%
+  height: 100%;
   overflow: hidden;
   position: relative;
+  border: 1px solid rgba(0,0,0,.2);
 }
 .section-4 .mask-layout{
     position: absolute;
