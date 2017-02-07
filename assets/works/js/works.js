@@ -17,12 +17,14 @@ controller('startCtrl', function ($scope,$interval) {
   },1000)
 }).
 controller('mainCtrl', function ($scope,$rootScope,$http) {
+  window.scrollTo(0,0);
   $scope.hasMore = true;  //是否还有更多数据可供加载
   $scope.showList = [];   //用于保存正在显示的菜品的数组
   //控制器初始化/页面加载时，从服务器读取最前面的5条记录
   $http.get('./assets/works/woele/data/dish_list.json').
   success(function(data){
     $rootScope.dishList = data; //用于保存所有菜品数据的数组
+    console.log($scope.dishList.slice(0,5));
     $scope.showList = $scope.dishList.slice(0,5);
   });
   //“加载更多”按钮的单击事件处理函数：每点击一次，加载更多的5条数据
@@ -32,7 +34,7 @@ controller('mainCtrl', function ($scope,$rootScope,$http) {
   };
 }).
 controller('detailCtrl', function ($scope, $rootScope ,$routeParams) {
-
+  window.scrollTo(0,0);
   $scope.dish =  $rootScope.dishList[$routeParams.did];
 }).
 controller('orderCtrl', function($rootScope, $scope,$routeParams,$http){
