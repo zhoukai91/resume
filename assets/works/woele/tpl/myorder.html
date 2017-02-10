@@ -1,4 +1,4 @@
-<div ng-include=" './assets/works/woele/tpl/header.html' "></div>
+<div ng-include="  './woele/tpl/header.html' "></div>
 <div class="container">
   <h3 class="text-center">我的订单</h3>
   <div class="table-responsive">
@@ -15,7 +15,7 @@
       <tr ng-repeat="o in orderList">
         <td>{{o.oid}}</td>
         <td style="vertical-align: middle">
-          <a href="#/detail/{{o.did}}"><img ng-src="./assets/works/woele/img/{{o.img_sm}}" width="80"/></a></td>
+          <a href="#/detail/{{o.did}}"><img ng-src="./woele/img/{{o.img_sm}}" width="80"/></a></td>
         <td>{{o.order_time | date :'yyyy-MM-dd HH:mm'}}</td>
         <td>{{o.user_name}}</td>
       </tr>
@@ -25,4 +25,4 @@
 </div>
 
 <br><br><br>
-<div ng-include=" './assets/works/woele/tpl/footer.html' "></div>
+<div ng-include="  './woele/tpl/footer.html'  "></div>
