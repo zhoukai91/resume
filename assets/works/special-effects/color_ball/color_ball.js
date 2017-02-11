@@ -16,6 +16,8 @@ window.onload = function () {
   var SPEED_MAX = 20;
   var headerWidth = 50;  //导航条的高度
 
+  console.log(document.documentElement.clientWidth);
+  console.log(document.documentElement.clientHeight);
   oAutoPlay.onclick = function () {
     if (this.value == '自动移动') {
       //手动移动下进入，切换为自动移动
@@ -30,11 +32,11 @@ window.onload = function () {
         y += ySpeed;
 
         //防止圆圈 超出屏幕边界
-        if (x <= SIZE / 2)xSpeed = rnd(0, SPEED_MAX);
-        if (x >= document.documentElement.clientWidth - SIZE / 2)xSpeed = -rnd(0, SPEED_MAX);
+        if (x <= SIZE / 2) xSpeed = rnd(0, SPEED_MAX);
+        if (x >= document.documentElement.clientWidth - SIZE / 2) xSpeed = -rnd(0, SPEED_MAX);
 
-        if (y <= (SIZE / 2) + headerWidth)ySpeed = rnd(0, SPEED_MAX);
-        if (y >= document.documentElement.clientHeight - SIZE / 2)ySpeed = -rnd(0, SPEED_MAX);
+        if (y <= (SIZE / 2) + headerWidth) ySpeed = rnd(0, SPEED_MAX);
+        if (y >= document.documentElement.clientHeight - SIZE / 2) ySpeed = -rnd(0, SPEED_MAX);
 
         //改变圆圈之间的距离
         if (xSpeed < -SPEED_MAX) {
