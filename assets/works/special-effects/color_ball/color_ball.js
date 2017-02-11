@@ -16,8 +16,6 @@ window.onload = function () {
   var SPEED_MAX = 20;
   var headerWidth = 50;  //导航条的高度
 
-  console.log(document.documentElement.clientWidth);
-  console.log(document.documentElement.clientHeight);
   oAutoPlay.onclick = function () {
     if (this.value == '自动移动') {
       //手动移动下进入，切换为自动移动
@@ -176,14 +174,20 @@ window.onload = function () {
 
   function fnHandlerMouseMove() {
     bCanUse = true;
-    document.onmousemove = function (ev) {
+    document.onmousemove =  function (ev) {
       var oEvent = ev || event;
 
-      if (!(samp++ % SAMP_RATE)) {  //设置手动模式下  调用onMove()的频率  增加圆圈之间的距离
+      if (!(samp++ % SAMP_RATE)) {  //设置手动模式下  调用onMove()的频率
         onMove(oEvent.clientX, oEvent.clientY);
       }
       return false;
     };
+    document.ontouchmove = function(ev){
+      if (!(samp++ % SAMP_RATE)) {  //设置手动模式下  调用onMove()的频率  增加圆圈之间的距离
+        onMove(ev.originalEvent.changedTouches[0].pageX,ev.originalEvent.changedTouches[0].pageY);
+      }
+      return false;
+    }
 
     document.onmouseup = function () {
       document.onmousemove = null;
