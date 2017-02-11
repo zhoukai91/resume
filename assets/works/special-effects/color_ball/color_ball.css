@@ -106,3 +106,7 @@ em {
   font-weight: normal;
   font-style: normal;
 }
+#wel-menu .dropdown .dropdown-menu li a:hover{
+  background : #337ab7;
+  color : #fff;
+}

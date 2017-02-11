@@ -182,7 +182,7 @@ var MetaData = (function(){
 		        var myChart = echarts.init(bar);
 		        var _this = this;
 		        myChart.on('click', function (params) {
-		        	$.getJSON("./data/line.json",{month:params.name},function(data){
+		        	$.getJSON("./p2p/data/line.json",{month:params.name},function(data){
 		        		_this.renderLine(metaData,params.name,data);
 		        	});
 				});

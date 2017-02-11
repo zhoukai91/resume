@@ -3,11 +3,11 @@ $(function(){
     	.bootstrapValidator()
     	.on("success",function(){
           //  /data/data2.json
-    		$.getJSON("./data/data1.json",MetaData.changeQuerys(this),function(data){
+    		$.getJSON("./p2p/data/data1.json",MetaData.changeQuerys(this),function(data){
                 MetaData.load(data);
             });
     	});
-    $.getJSON("./data/data1.json",function(obj){
+    $.getJSON("./p2p/data/data1.json",function(obj){
         MetaData.load(obj);//通过加载数据让metaData驱动程序工作
     });
     //所有承兑人类型tab页中的多选按钮（不包括全选）
