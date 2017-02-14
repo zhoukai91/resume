@@ -7,7 +7,7 @@ $(function () {
   $sectionBody.sectionWrapper({
     "showSerial": false
   }).on("afterWheel",function(event,ops){
-    var widths = [30,50,89,12]; //用于保存技能条的长度
+    var widths = [70,90,80,60]; //用于保存技能条的长度
     if(ops.after==2){
        for(var i=0;i<$bars.length;i++){
          //$bars[i]是DOM对象
