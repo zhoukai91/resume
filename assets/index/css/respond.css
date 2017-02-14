@@ -34,6 +34,12 @@
   .section-2 .contact li{
     padding-bottom:30px;:
   }
+
+  .section-4 content{
+    width : 90%;
+    margin: 0 auto;
+  }
+
 }
 @media screen and (min-width: 768px)and (max-width: 992px){
   .section h1{
@@ -137,12 +143,13 @@
   .section-2 .contact .li1{
     width:22%;
   }
-
   .section-3 .level p{
   margin-bottom:7px;
   }
   .section-3 #myTab li a{
     padding:5px 0;
   }
+
+
 }
 

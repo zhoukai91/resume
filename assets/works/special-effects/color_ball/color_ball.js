@@ -182,12 +182,6 @@ window.onload = function () {
       }
       return false;
     };
-    document.ontouchmove = function(ev){
-      if (!(samp++ % SAMP_RATE)) {  //设置手动模式下  调用onMove()的频率  增加圆圈之间的距离
-        onMove(ev.originalEvent.changedTouches[0].pageX,ev.originalEvent.changedTouches[0].pageY);
-      }
-      return false;
-    }
 
     document.onmouseup = function () {
       document.onmousemove = null;

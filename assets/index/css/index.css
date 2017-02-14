@@ -215,6 +215,13 @@ a:focus, a:hover {
   position: relative;
   border: 1px solid rgba(0,0,0,.2);
 }
+.section-4 .project-detail{
+  margin : 10px 0;
+}
+.section-4 content{
+  display: block;
+  text-align: left;
+}
 .section-4 .mask-layout{
     position: absolute;
     height: 100%;
