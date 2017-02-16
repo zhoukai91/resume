@@ -150,6 +150,9 @@
     padding:5px 0;
   }
 
+  .section-5 textarea{
+    height: 100px;
+  }
 
 }
 
