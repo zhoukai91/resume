@@ -1,0 +1,145 @@
+<!Doctype html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+	<title></title>
+	<style>
+		*{
+			padding:0;
+			margin:0;
+			border:0;
+			outline:0;
+		}
+		body{
+			width:100%;
+			height: 100%;
+			background: #000;
+		}
+		#platform{
+			width:120px;
+			height:180px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-top: -90px;
+			margin-left: -60px;
+			transform-style: preserve-3d; /*保留位置*/
+									  /*视距*/
+			transform: perspective(800px) rotateY(120deg) rotateX(0deg);
+			/*perspective-origin: center center   */
+
+		}
+		#platform img {
+			width: 120px;
+			height: 180px;
+			position: absolute;
+			border-radius: 3px;
+			box-shadow: 0 0 10px #fff;
+			transition: all .2s;
+			/*-webkit-box-reflect: below 1px linear-gradient(transparent , transparen 60% , rgba(0,0,0,.2));*/
+		}
+	</style>
+
+</head>
+<body>
+<header class="navbar navbar-default navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="../../index.html">个人作品</a>
+			<button class="navbar-toggle" data-toggle="collapse" data-target="#wel-menu">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+
+		<div class="collapse navbar-collapse" id="wel-menu">
+			<ul class="nav navbar-nav">
+				<li ><a href="./woele.html">网上订餐--我饿了</a></li>
+				<li><a href="./p2p.html">实习案例</a></li>
+				<li class="dropdown active">
+					<a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+						 aria-expanded="false">JS特效案例 <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="./showPro.html">产品展示特效</a></li>
+						<li><a href="./color_ball.html">彩虹圈</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</header>
+	<div id="platform">
+		<img src="./JSdemo/showPro/images/1.jpg" >
+		<img src="./JSdemo/showPro/images/2.jpg" >
+		<img src="./JSdemo/showPro/images/3.jpg" >
+		<img src="./JSdemo/showPro/images/4.jpg" >
+		<img src="./JSdemo/showPro/images/5.jpg" >
+		<img src="./JSdemo/showPro/images/6.jpg" >
+		<img src="./JSdemo/showPro/images/7.jpg" >
+		<img src="./JSdemo/showPro/images/8.jpg" >
+		<img src="./JSdemo/showPro/images/9.jpg" >
+		<img src="./JSdemo/showPro/images/10.jpg" >
+		<!--<img src="./showPro/./JSdemo/showPro/images/11.jpg" >-->
+		<!--<img src="./showPro/./JSdemo/showPro/images/12.jpg" >-->
+	</div>
+	<script>
+		window.onload =function(){
+			var myPlatfomt = document.getElementById("platform");
+			var imgItems = myPlatfomt.getElementsByTagName("img");
+			var _x,_y,xOffset,yOffset,roX = 0 ,roY = 0;
+			var timer=null;
+			var imgNum = imgItems.length;
+			var Deg = 360/imgNum;
+
+			for(var i = 0;i<imgNum;i++){
+				/*已自身作为旋转轴，因此需要先旋转再平移*/
+				imgItems[i].style.transform = " rotateY("+ Deg*i +"deg) translateZ(350px)";
+				/*为图片绑定事件*/
+				imgItems[i],ondragstart = function(){
+					return false;
+				}
+				imgItems[i].onmouseover = function(){
+					this.style['transform'] = this.style['transform'] += 'scale(1.2)';
+					clearInterval(timer);
+				}
+				imgItems[i].onmouseout = function(){
+					this.style['transform'] = this.style['transform'].replace('scale(1.2)','');
+					autoPlay();
+				}
+			}
+
+			document.onmousedown = function(e){
+				e = e || window.event;
+				_x = e.clientX;
+				_y = e.clientY;
+				this.onmousemove = function(e){
+					window.getSelection()?window.getSelection().removeAllRanges():document.selection.empty(); //清除选中文本
+					x = e.clientX;
+					y = e.clientY;
+//					计算偏移值
+					xOffset = x - _x;
+					yOffset = y - _y;
+//					console.log(x,y);
+					/*核心*/
+					roY += xOffset * 0.005; /* 左右转到，实际上是围绕Y轴进行旋转*/
+					roX -= yOffset * 0.005;
+					myPlatfomt.style.transform = "perspective(800px) rotateX("+roX+"deg)  rotateY("+roY+"deg)";
+				}
+				this.onmouseup = function(){
+					this.onmousemove = null;
+				}
+			}
+
+			function autoPlay(){
+				timer = window.setInterval(function(){
+					roY += 0.1;
+					myPlatfomt.style.transform = "perspective(800px) rotateX("+roX+"deg)  rotateY("+roY+"deg)";
+				},30);
+			}
+			autoPlay();
+		}
+	</script>
+
+</body>

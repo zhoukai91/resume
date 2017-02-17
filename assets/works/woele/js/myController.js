@@ -54,6 +54,7 @@ controller('orderCtrl', function($rootScope, $scope,$routeParams,$http){
 }).
 controller('myorderCtrl',function($scope,$http){
 	$http.get('./woele/data/orde_list.json').success(function(data){
+		console.log(data);
 		$scope.orderList = data;
 	});
 }).

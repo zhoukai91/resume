@@ -83,7 +83,7 @@ window.onload = function () {
   var continue_count = 0;
   var i = 0;
 
-  var path = "./special-effects/color_ball/";
+  var path = "./JSdemo/color_ball/";
   var lastIType = -1;  //上一次图片显示的类型
 
   var SAMP_RATE = 3;  // 手动模式下，圆圈创建速率调用速率
