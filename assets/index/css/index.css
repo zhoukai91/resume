@@ -220,10 +220,11 @@ a:focus, a:hover {
 
 .section-3 .level .progress-bar {
   background-color: #607d8b;
-  transition: all 1s linear;
   -webkit-transition: all 1s linear;
-  -moz-transition: all 1s linear;
-  -o-transition: all 1s linear;
+  -moz-transition: all 1s linear ;
+  -ms-transition: all 1s linear ;
+  -o-transition: all 1s linear ;
+  transition: all 1s linear ;
 
 }
 

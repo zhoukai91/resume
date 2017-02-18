@@ -181,6 +181,7 @@ var MetaData = (function(){
 				var barDetail = $(bar).next().next();
 		        var myChart = echarts.init(bar);
 		        var _this = this;
+		        //定义点击事件
 		        myChart.on('click', function (params) {
 		        	$.getJSON("./p2p/data/line.json",{month:params.name},function(data){
 		        		_this.renderLine(metaData,params.name,data);
@@ -311,5 +312,5 @@ var MetaData = (function(){
 				Utils.numberFormat();
 			}
 		}//列表数据模块);
-	},__PROTOTYPE__);
+	},__PROTOTYPE__);  //为MetaData对象扩展__PROTOTYPE__里面的方法
 })();

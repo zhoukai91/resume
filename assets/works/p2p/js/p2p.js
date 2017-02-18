@@ -3,7 +3,7 @@ $(function(){
     	.bootstrapValidator()
     	.on("success",function(){
           //  /data/data2.json
-    		$.getJSON("./p2p/data/data1.json",MetaData.changeQuerys(this),function(data){
+    		$.getJSON("./p2p/data/data2.json",MetaData.changeQuerys(this),function(data){
                 MetaData.load(data);
             });
     	});
