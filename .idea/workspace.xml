@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4bdeb391-647c-411d-b423-20b8701c8c20" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/index/css/index.css" afterPath="$PROJECT_DIR$/assets/index/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/works/p2p.html" afterPath="$PROJECT_DIR$/assets/works/p2p.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/works/p2p/js/metaData.js" afterPath="$PROJECT_DIR$/assets/works/p2p/js/metaData.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/works/p2p/js/p2p.js" afterPath="$PROJECT_DIR$/assets/works/p2p/js/p2p.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/works/showPro.html" afterPath="$PROJECT_DIR$/assets/works/showPro.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="Resume.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,13 +39,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="p2p.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="p2p.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/works/p2p.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.48">
-              <caret line="158" column="47" selection-start-line="158" selection-start-column="47" selection-end-line="158" selection-end-column="47" />
+            <state vertical-scroll-proportion="210.14706">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="19" />
               <folding>
                 <element signature="n#header#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="showPro.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/works/showPro.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5581818">
+              <caret line="147" column="3" selection-start-line="147" selection-start-column="3" selection-end-line="147" selection-end-column="3" />
+              <folding>
+                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -107,8 +113,8 @@
         <option value="$PROJECT_DIR$/assets/works/woele/tpl/myorder.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/assets/index/css/index.css" />
-        <option value="$PROJECT_DIR$/assets/works/showPro.html" />
         <option value="$PROJECT_DIR$/assets/works/p2p.html" />
+        <option value="$PROJECT_DIR$/assets/works/showPro.html" />
       </list>
     </option>
   </component>
@@ -343,9 +349,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -736,13 +742,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/works/showPro.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29454544">
-          <caret line="104" column="7" selection-start-line="104" selection-start-column="7" selection-end-line="104" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/works/woele/tpl/myorder.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.04909091">
@@ -773,10 +772,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/works/p2p.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48">
-          <caret line="158" column="47" selection-start-line="158" selection-start-column="47" selection-end-line="158" selection-end-column="47" />
+        <state vertical-scroll-proportion="210.14706">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="19" />
           <folding>
             <element signature="n#header#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/works/showPro.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5581818">
+          <caret line="147" column="3" selection-start-line="147" selection-start-column="3" selection-end-line="147" selection-end-column="3" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
