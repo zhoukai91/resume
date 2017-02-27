@@ -1,40 +1,37 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 
-<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta charset="utf-8" />
   <link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
   <title></title>
   <style>
-    * {
-      padding: 0;
-      margin: 0;
-      border: 0;
-      outline: 0;
+    *{
+      padding:0;
+      margin:0;
+      border:0;
+      outline:0;
     }
-
-    body {
-      width: 100%;
+    body{
+      width:100%;
       height: 100%;
       background: #000;
     }
-
-    #platform {
-      width: 120px;
-      height: 180px;
+    #platform{
+      width:120px;
+      height:180px;
       position: absolute;
       top: 50%;
       left: 50%;
       margin-top: -90px;
       margin-left: -60px;
       transform-style: preserve-3d; /*保留位置*/
-                   /*视距*/
-      transform: perspective(800px) rotateY(120deg) rotateX(0deg);
+      /*视距*/
+      transform: perspective(800px) rotateY(0deg) rotateX(0deg);
       /*perspective-origin: center center   */
 
     }
-
     #platform img {
       width: 120px;
       height: 180px;
@@ -43,6 +40,12 @@
       box-shadow: 0 0 10px #fff;
       transition: all .2s;
       /*-webkit-box-reflect: below 1px linear-gradient(transparent , transparen 60% , rgba(0,0,0,.2));*/
+    }
+    div.alert {
+      position: relative;
+      z-index: 1000;
+      margin-top: 400px;
+
     }
   </style>
 </head>
@@ -60,7 +63,7 @@
 
     <div class="collapse navbar-collapse" id="wel-menu">
       <ul class="nav navbar-nav">
-        <li><a href="./woele.html">网上订餐--我饿了</a></li>
+        <li ><a href="./woele.html">网上订餐--我饿了</a></li>
         <li><a href="./p2p.html">实习案例</a></li>
         <li class="dropdown active">
           <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
@@ -88,6 +91,9 @@
   <!--<img src="./showPro/./JSdemo/showPro/images/11.jpg" >-->
   <!--<img src="./showPro/./JSdemo/showPro/images/12.jpg" >-->
 </div>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script>
   window.onload = function () {
     var myPlatfomt = document.getElementById("platform");
@@ -138,6 +144,14 @@
     }
 
     function autoPlay() {
+      console.log(screen.width);
+      if(screen.width <768) {
+        var div = document.createElement('div');
+        var str = '<div id="alert" class="alert alert-warning alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>这个dome必须使用电脑浏览器(全屏模式下)访问!</strong>.</div>'
+        div.innerHTML = str;
+        document.body.appendChild(div)
+        return;
+      }
       timer = window.setInterval(function () {
         roY += 0.1;
         myPlatfomt.style.transform = "perspective(800px) rotateX(" + roX + "deg)  rotateY(" + roY + "deg)";
