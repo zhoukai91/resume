@@ -48,6 +48,7 @@
 			this.on("touchstart",function(e){
 				//一个小bug 将会导致click事件失效
 				//e.preventDefault();
+
 				startX = e.originalEvent.changedTouches[0].pageX;
 				startY = e.originalEvent.changedTouches[0].pageY;
 				console.log('点击');
