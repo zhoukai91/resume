@@ -45,7 +45,7 @@ $(function(){
             totalInvestmentAmt+=meta.faceAmt;
             weightedAverageYield+=meta.discountRate;
         });
-        totalBillAmt /= totalBillCnt;
+        //totalBillAmt /= totalBillCnt;
         weightedAverageYield /= totalBillCnt;
         MetaData.load({
             detail:{
